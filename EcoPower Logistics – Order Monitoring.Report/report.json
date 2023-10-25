@@ -1,0 +1,547 @@
+{
+  "config": "{\"version\":\"5.48\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU08\",\"version\":\"5.48\",\"type\":2},\"customTheme\":{\"name\":\"Theme_7_-_Dark40713633556512363.json\",\"version\":\"5.48\",\"type\":1}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"filterPaneHiddenInEditMode\":false},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "ReportSectiondf882e834a386b8cd463",
+      "config": "{}",
+      "name": "Pod",
+      "referenceScope": 1
+    },
+    {
+      "boundSection": "ReportSection78136d62bb6c0099b303",
+      "config": "{}",
+      "name": "Pod1",
+      "referenceScope": 1
+    },
+    {
+      "boundSection": "ReportSectionfc2c3184f04351e06da9",
+      "config": "{}",
+      "name": "Pod2",
+      "referenceScope": 1
+    },
+    {
+      "boundSection": "ReportSection",
+      "config": "{}",
+      "name": "Pod3",
+      "referenceScope": 1
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU08",
+            "path": "BaseThemes/CY23SU08.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "EcoPower_Logistics_V25757580247255463.png",
+            "path": "EcoPower_Logistics_V25757580247255463.png",
+            "type": 100
+          },
+          {
+            "name": "Theme_7_-_Dark40713633556512363.json",
+            "path": "Theme_7_-_Dark40713633556512363.json",
+            "type": 201
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"250L\"}}}}}]}}",
+      "displayName": "High-Level Metrics",
+      "displayOption": 3,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"08d20f06c84d1490c849\",\"layouts\":[{\"id\":0,\"position\":{\"x\":254,\"y\":183.5,\"z\":11000,\"width\":329,\"height\":255,\"tabOrder\":11000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(Customers.CustomerId)\"}],\"Category\":[{\"queryRef\":\"Customers.CustomerTitle\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Customers\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"CustomerId\"}},\"Function\":5},\"Name\":\"CountNonNull(Customers.CustomerId)\",\"NativeReferenceName\":\"Percentage of Customers\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"CustomerTitle\"},\"Name\":\"Customers.CustomerTitle\",\"NativeReferenceName\":\"CustomerTitle\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"CustomerId\"}},\"Function\":5}}}]},\"columnProperties\":{\"CountNonNull(Customers.CustomerId)\":{\"displayName\":\"Percentage of Customers\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"labelStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'Category, percent of total'\"}}}}}]},\"vcObjects\":{\"padding\":[{\"properties\":{\"top\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"left\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"bottom\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"right\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}],\"title\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0.6}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 255.00,
+          "width": 329.00,
+          "x": 254.00,
+          "y": 183.50,
+          "z": 11000.00
+        },
+        {
+          "config": "{\"name\":\"1d2d818d36e42ce01cf3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":254,\"y\":455,\"z\":10000,\"width\":670,\"height\":255,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(Products.UnitsInStock)\"}],\"Category\":[{\"queryRef\":\"Products.ProductName\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Products\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"UnitsInStock\"}},\"Function\":0},\"Name\":\"CountNonNull(Products.UnitsInStock)\",\"NativeReferenceName\":\"Number of UnitsInStock\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"ProductName\"},\"Name\":\"Products.ProductName\",\"NativeReferenceName\":\"ProductName\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"UnitsInStock\"}},\"Function\":0}}}]},\"columnProperties\":{\"CountNonNull(Products.UnitsInStock)\":{\"displayName\":\"Number of UnitsInStock\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}},\"titleColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0.6}}}}}}}],\"valueAxis\":[{\"properties\":{\"titleColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0.6}}}}}}}]},\"vcObjects\":{\"padding\":[{\"properties\":{\"left\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"top\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"right\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"bottom\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}],\"title\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0.6}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 255.00,
+          "width": 670.00,
+          "x": 254.00,
+          "y": 455.00,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"291007b9abe23eb8ee59\",\"layouts\":[{\"id\":0,\"position\":{\"x\":254,\"y\":92,\"z\":14000,\"width\":165,\"height\":75,\"tabOrder\":14000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Customers.Name\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Customers\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Name\"}},\"Function\":5},\"Name\":\"Customers.Name\",\"NativeReferenceName\":\"Number of Customers\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Name\"}},\"Function\":5}}}]},\"columnProperties\":{\"Customers.Name\":{\"displayName\":\"Number of Customers\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"wordWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"autoSizeColumnWidth\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}}}}],\"columnFormatting\":[{\"properties\":{\"styleValues\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"styleTotal\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"styleHeader\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"metadata\":\"Customers.Name\"}}],\"total\":[{\"properties\":{\"totals\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"columnWidth\":[{\"properties\":{},\"selector\":{\"metadata\":\"Customers.Name\"}}],\"grid\":[{\"properties\":{\"gridHorizontal\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"gridHorizontalColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}},\"gridHorizontalWeight\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"gridVertical\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"gridVerticalWeight\":{\"expr\":{\"Literal\":{\"Value\":\"4D\"}}},\"gridVerticalColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}},\"outlineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"values\":[{\"properties\":{\"backColorPrimary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":5,\"Percent\":0}}}}},\"backColorSecondary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}},\"fontColorSecondary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}},\"fontColorPrimary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":7,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'FlashyRows'\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Number of Customers'\"}}},\"heading\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 75.00,
+          "width": 165.00,
+          "x": 254.00,
+          "y": 92.00,
+          "z": 14000.00
+        },
+        {
+          "config": "{\"name\":\"358418901531b5db4a4a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":537,\"y\":92,\"z\":16000,\"width\":165,\"height\":75,\"tabOrder\":16000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Products.Category\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Products\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Category\"}},\"Function\":2},\"Name\":\"Products.Category\",\"NativeReferenceName\":\"Count of Category1\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Category\"}},\"Function\":5}}}]},\"columnProperties\":{\"Customers.Name\":{\"displayName\":\"Number of Customers\"},\"Products.Category\":{\"displayName\":\"Number of Categories\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"wordWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"autoSizeColumnWidth\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}}}}],\"total\":[{\"properties\":{\"totals\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"grid\":[{\"properties\":{\"gridHorizontal\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"gridHorizontalColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}},\"gridHorizontalWeight\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"gridVertical\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"gridVerticalWeight\":{\"expr\":{\"Literal\":{\"Value\":\"4D\"}}},\"gridVerticalColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}},\"outlineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"values\":[{\"properties\":{\"backColorPrimary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":5,\"Percent\":0}}}}},\"backColorSecondary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}},\"fontColorSecondary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}},\"fontColorPrimary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":7,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'FlashyRows'\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Number of Customers'\"}}},\"heading\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 75.00,
+          "width": 165.00,
+          "x": 537.00,
+          "y": 92.00,
+          "z": 16000.00
+        },
+        {
+          "config": "{\"name\":\"6e7a0378eae8a866203f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1103,\"y\":92,\"z\":17000,\"width\":165,\"height\":75,\"tabOrder\":17000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Products.UnitsInStock\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Products\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"UnitsInStock\"}},\"Function\":0},\"Name\":\"Products.UnitsInStock\",\"NativeReferenceName\":\"Sum of Units In Stock\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"UnitsInStock\"}},\"Function\":0}}}]},\"columnProperties\":{\"Customers.Name\":{\"displayName\":\"Number of Customers\"},\"Products.UnitsInStock\":{\"displayName\":\"Sum of Units In Stock\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"wordWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"autoSizeColumnWidth\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}}}}],\"total\":[{\"properties\":{\"totals\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"grid\":[{\"properties\":{\"gridHorizontal\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"gridHorizontalColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}},\"gridHorizontalWeight\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"gridVertical\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"gridVerticalWeight\":{\"expr\":{\"Literal\":{\"Value\":\"4D\"}}},\"gridVerticalColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}},\"outlineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"values\":[{\"properties\":{\"backColorPrimary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":5,\"Percent\":0}}}}},\"backColorSecondary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}},\"fontColorSecondary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}},\"fontColorPrimary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":7,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'FlashyRows'\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Number of Customers'\"}}},\"heading\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 75.00,
+          "width": 165.00,
+          "x": 1103.00,
+          "y": 92.00,
+          "z": 17000.00
+        },
+        {
+          "config": "{\"name\":\"74a0efcf6d9b955912c7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":820,\"y\":92,\"z\":15000,\"width\":165,\"height\":75,\"tabOrder\":15000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Order Details.OrderId\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o1\",\"Entity\":\"Order Details\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o1\"}},\"Property\":\"OrderId\"}},\"Function\":5},\"Name\":\"Order Details.OrderId\",\"NativeReferenceName\":\"Number of Orders\"}]},\"columnProperties\":{\"Customers.Name\":{\"displayName\":\"Number of Customers\"},\"Orders.OrderId\":{\"displayName\":\"Number of Orders\"},\"Order Details.OrderId\":{\"displayName\":\"Number of Orders\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"wordWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"autoSizeColumnWidth\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}}}}],\"total\":[{\"properties\":{\"totals\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"grid\":[{\"properties\":{\"gridHorizontal\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"gridHorizontalColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}},\"gridHorizontalWeight\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"gridVertical\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"gridVerticalWeight\":{\"expr\":{\"Literal\":{\"Value\":\"4D\"}}},\"gridVerticalColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}},\"outlineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"values\":[{\"properties\":{\"backColorPrimary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":5,\"Percent\":0}}}}},\"backColorSecondary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}},\"fontColorSecondary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}},\"fontColorPrimary\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":7,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'FlashyRows'\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Number of Customers'\"}}},\"heading\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 75.00,
+          "width": 165.00,
+          "x": 820.00,
+          "y": 92.00,
+          "z": 15000.00
+        },
+        {
+          "config": "{\"name\":\"8d05ff21cd5e2d526002\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":2000,\"width\":232,\"height\":153,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"EcoPower_Logistics_V25757580247255463.png\"}}}}}],\"imageScaling\":[{\"properties\":{\"imageScalingType\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"25D\"}}}}}],\"padding\":[{\"properties\":{\"top\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"left\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"right\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"bottom\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 153.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"962acef0f0cc788cdf14\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":612,\"z\":7000,\"width\":232,\"height\":89,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Order Details.Discount\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"Order Details\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Discount\"},\"Name\":\"Order Details.Discount\",\"NativeReferenceName\":\"Discount\"}]},\"syncGroup\":{\"groupName\":\"Discount\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"header\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}}}}],\"items\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#272B34'\"}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 89.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 612.00,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"96e33be2bb8c46be5019\",\"layouts\":[{\"id\":0,\"position\":{\"x\":938,\"y\":455,\"z\":13000,\"width\":329,\"height\":255,\"tabOrder\":13000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Orders.OrderDate.Variation.Date Hierarchy.Month\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Order Details.OrderId)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"Orders\",\"Type\":0},{\"Name\":\"o1\",\"Entity\":\"Order Details\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Name\":\"Variation\",\"Property\":\"OrderDate\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"},\"Name\":\"Orders.OrderDate.Variation.Date Hierarchy.Month\",\"NativeReferenceName\":\"OrderDate Month\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o1\"}},\"Property\":\"OrderId\"}},\"Function\":5},\"Name\":\"CountNonNull(Order Details.OrderId)\",\"NativeReferenceName\":\"Number of Orders\"}]},\"columnProperties\":{\"CountNonNull(Order Details.OrderId)\":{\"displayName\":\"Number of Orders\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"titleColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0.6}}}}}}}],\"valueAxis\":[{\"properties\":{\"titleColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0.6}}}}},\"gridlineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'dotted'\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":5,\"Percent\":0}}}}}}},{\"properties\":{},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}}]},\"vcObjects\":{\"padding\":[{\"properties\":{\"left\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"top\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"right\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"bottom\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}],\"title\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0.6}}}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 255.00,
+          "width": 329.00,
+          "x": 938.00,
+          "y": 455.00,
+          "z": 13000.00
+        },
+        {
+          "config": "{\"name\":\"96f3c679d4b33a4bcab8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":338,\"z\":5000,\"width\":232,\"height\":89,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Customers.CustomerTitle\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Customers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"CustomerTitle\"},\"Name\":\"Customers.CustomerTitle\",\"NativeReferenceName\":\"CustomerTitle\"}]},\"syncGroup\":{\"groupName\":\"CustomerTitle\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"header\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}}}}],\"items\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#272B34'\"}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 89.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 338.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"9ef23ef86b8db1bd6482\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":249,\"z\":4000,\"width\":232,\"height\":89,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Products.ProductName\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Products\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"ProductName\"},\"Name\":\"Products.ProductName\",\"NativeReferenceName\":\"ProductName\"}]},\"expansionStates\":[{\"roles\":[\"Values\"],\"levels\":[{\"queryRefs\":[\"Products.ProductName\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"syncGroup\":{\"groupName\":\"ProductName\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"header\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}}}}],\"items\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#272B34'\"}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 89.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 249.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"a28117c81b2242c420fd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":232,\"height\":720,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}},\"selector\":{\"id\":\"default\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"ba1bde84373807fbf91b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":434,\"z\":6000,\"width\":232,\"height\":89,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Customers.Name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Customers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Name\"},\"Name\":\"Customers.Name\",\"NativeReferenceName\":\"Name\"}]},\"syncGroup\":{\"groupName\":\"Name\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"header\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}}}}],\"items\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#272B34'\"}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 89.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 434.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"bfba9f0324a62f7de1dd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":232,\"y\":8,\"z\":1000,\"width\":456,\"height\":50,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"\"}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"100D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'High-Level Metrics'\"}}},\"heading\":{\"expr\":{\"Literal\":{\"Value\":\"'Heading2'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'wf_standard-font, helvetica, arial, sans-serif'\"}}},\"underline\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"italic\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"null\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 50.00,
+          "width": 456.00,
+          "x": 232.00,
+          "y": 8.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"d624fb94f695e1c4d3ad\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":160,\"z\":3000,\"width\":232,\"height\":89,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Products.Category\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Products\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Category\"},\"Name\":\"Products.Category\",\"NativeReferenceName\":\"Category\"}]},\"expansionStates\":[{\"roles\":[\"Values\"],\"levels\":[{\"queryRefs\":[\"Products.Category\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"syncGroup\":{\"groupName\":\"Category\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"header\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}}}}],\"items\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#272B34'\"}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 89.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 160.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"d6a43d62a2f7351e2810\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":523,\"z\":8000,\"width\":232,\"height\":89,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Order Details.Quantity\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"Order Details\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Quantity\"},\"Name\":\"Order Details.Quantity\",\"NativeReferenceName\":\"Quantity\"}]},\"syncGroup\":{\"groupName\":\"Quantity\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"header\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}}}}],\"items\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#272B34'\"}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 89.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 523.00,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"ed8831bd231761167deb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":688,\"y\":8,\"z\":9000,\"width\":584,\"height\":50,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"pageNavigator\",\"drillFilterOtherVisuals\":true,\"objects\":{\"pages\":[{\"properties\":{\"showHiddenPages\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showByDefault\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"showPage\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"ReportSection\"}},{\"properties\":{\"showPage\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}},\"selector\":{\"id\":\"ReportSectiondf882e834a386b8cd463\"}},{\"properties\":{\"showPage\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}},\"selector\":{\"id\":\"ReportSection78136d62bb6c0099b303\"}},{\"properties\":{\"showPage\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}},\"selector\":{\"id\":\"ReportSectionfc2c3184f04351e06da9\"}}],\"text\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'wf_standard-font, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 50.00,
+          "width": 584.00,
+          "x": 688.00,
+          "y": 8.00,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"f4e2f51d0fe1a90d6e6c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":597,\"y\":183.5,\"z\":12000,\"width\":671,\"height\":255,\"tabOrder\":12000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Products.Category\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Order Details.OrderId)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"Order Details\",\"Type\":0},{\"Name\":\"p\",\"Entity\":\"Products\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Category\"},\"Name\":\"Products.Category\",\"NativeReferenceName\":\"Category\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"OrderId\"}},\"Function\":5},\"Name\":\"CountNonNull(Order Details.OrderId)\",\"NativeReferenceName\":\"Number of Orders\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"OrderId\"}},\"Function\":5}}}]},\"columnProperties\":{\"CountNonNull(Order Details.OrderId)\":{\"displayName\":\"Number of Orders\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"titleColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0.6}}}}}}}],\"valueAxis\":[{\"properties\":{\"titleColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0.6}}}}}}}]},\"vcObjects\":{\"padding\":[{\"properties\":{\"top\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"left\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"bottom\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"right\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}],\"title\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0.6}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 255.00,
+          "width": 671.00,
+          "x": 597.00,
+          "y": 183.50,
+          "z": 12000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Product Monitoring",
+      "displayOption": 3,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection78136d62bb6c0099b303",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"102668af01a2db84a3c9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":232,\"height\":720,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}},\"selector\":{\"id\":\"default\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"327334c9f1a97b174c5c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":252,\"z\":3000,\"width\":232,\"height\":50,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'blank'\"}}},\"lineWeight\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}},\"placement\":{\"expr\":{\"Literal\":{\"Value\":\"'custom'\"}}},\"leftMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"rightMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"iconSize\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'right'\"}}}},\"selector\":{\"id\":\"default\"}}],\"text\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Product Monitoring'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'PageNavigation'\"}}},\"navigationSection\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}},\"showDefaultTooltip\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 50.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 252.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"5b9e676369c7e54839d8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":232,\"y\":15,\"z\":1000,\"width\":216,\"height\":36,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Product Monitoring\",\"textStyle\":{\"fontSize\":\"18pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"100D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 36.00,
+          "width": 216.00,
+          "x": 232.00,
+          "y": 15.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"6c141fad251811d3cd51\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":152,\"z\":4000,\"width\":232,\"height\":50,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'blank'\"}}},\"lineWeight\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}},\"placement\":{\"expr\":{\"Literal\":{\"Value\":\"'custom'\"}}},\"leftMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"rightMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"iconSize\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'right'\"}}}},\"selector\":{\"id\":\"default\"}}],\"text\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'High-Level Metrics'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'PageNavigation'\"}}},\"navigationSection\":{\"expr\":{\"Literal\":{\"Value\":\"'ReportSection'\"}}},\"showDefaultTooltip\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 50.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 152.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"90cd3cd16abf5fee7ab8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":6000,\"width\":232,\"height\":153,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"EcoPower_Logistics_V25757580247255463.png\"}}}}}],\"imageScaling\":[{\"properties\":{\"imageScalingType\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"25D\"}}}}}],\"padding\":[{\"properties\":{\"top\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"left\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"right\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"bottom\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 153.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"c13f6f1c6b8c87bc8d93\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":302,\"z\":2000,\"width\":232,\"height\":50,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'blank'\"}}},\"lineWeight\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}},\"placement\":{\"expr\":{\"Literal\":{\"Value\":\"'custom'\"}}},\"leftMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"rightMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"iconSize\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'right'\"}}}},\"selector\":{\"id\":\"default\"}}],\"text\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Customer Monitoring'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'PageNavigation'\"}}},\"navigationSection\":{\"expr\":{\"Literal\":{\"Value\":\"'ReportSectionfc2c3184f04351e06da9'\"}}},\"showDefaultTooltip\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 50.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 302.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"e2e21182a232d0c9b743\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":202,\"z\":5000,\"width\":232,\"height\":50,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'blank'\"}}},\"lineWeight\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}},\"placement\":{\"expr\":{\"Literal\":{\"Value\":\"'custom'\"}}},\"leftMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"rightMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"iconSize\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'right'\"}}}},\"selector\":{\"id\":\"default\"}}],\"text\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Order Monitoring'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'PageNavigation'\"}}},\"navigationSection\":{\"expr\":{\"Literal\":{\"Value\":\"'ReportSectiondf882e834a386b8cd463'\"}}},\"showDefaultTooltip\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 50.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 202.00,
+          "z": 5000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"218L\"}}}}}]}}",
+      "displayName": "Order Monitoring",
+      "displayOption": 3,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectiondf882e834a386b8cd463",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"070c15659d121e865163\",\"layouts\":[{\"id\":0,\"position\":{\"x\":245,\"y\":422,\"z\":0,\"width\":1023,\"height\":271,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(Order Details.OrderId)\"}],\"Category\":[{\"queryRef\":\"Products.ProductName\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"Order Details\",\"Type\":0},{\"Name\":\"p\",\"Entity\":\"Products\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"OrderId\"}},\"Function\":5},\"Name\":\"CountNonNull(Order Details.OrderId)\",\"NativeReferenceName\":\"Count of OrderId\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"ProductName\"},\"Name\":\"Products.ProductName\",\"NativeReferenceName\":\"ProductName\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"OrderId\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"zoom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showOnValueAxis\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"showAllDataPoints\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"preferredCategoryWidth\":{\"expr\":{\"Literal\":{\"Value\":\"20D\"}}},\"innerPadding\":{\"expr\":{\"Literal\":{\"Value\":\"30L\"}}}}}],\"valueAxis\":[{\"properties\":{}}]},\"vcObjects\":{\"padding\":[{\"properties\":{\"right\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"bottom\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"left\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"top\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 271.00,
+          "width": 1023.00,
+          "x": 245.00,
+          "y": 422.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"0b2d1731922a7a779b95\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":631,\"z\":15000,\"width\":232,\"height\":89,\"tabOrder\":15000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Order Details.Quantity\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"Order Details\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Quantity\"},\"Name\":\"Order Details.Quantity\",\"NativeReferenceName\":\"Quantity\"}]},\"syncGroup\":{\"groupName\":\"Quantity\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"header\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}}}}],\"items\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#272B34'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 89.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 631.00,
+          "z": 15000.00
+        },
+        {
+          "config": "{\"name\":\"0d65ace1d85d0b67c7fc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":302,\"z\":5000,\"width\":232,\"height\":50,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'blank'\"}}},\"lineWeight\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}},\"placement\":{\"expr\":{\"Literal\":{\"Value\":\"'custom'\"}}},\"leftMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"rightMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"iconSize\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'right'\"}}}},\"selector\":{\"id\":\"default\"}}],\"text\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Customer Monitoring'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'PageNavigation'\"}}},\"navigationSection\":{\"expr\":{\"Literal\":{\"Value\":\"'ReportSectionfc2c3184f04351e06da9'\"}}},\"showDefaultTooltip\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 50.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 302.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"3c52f34a69347c17aef3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":245,\"y\":105,\"z\":1000,\"width\":488,\"height\":271,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Customers.Name\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Order Details.OrderId)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"Order Details\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"Customers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Name\"},\"Name\":\"Customers.Name\",\"NativeReferenceName\":\"Name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"OrderId\"}},\"Function\":5},\"Name\":\"CountNonNull(Order Details.OrderId)\",\"NativeReferenceName\":\"Count of OrderId\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"OrderId\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"padding\":[{\"properties\":{\"top\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"left\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"bottom\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"right\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 271.00,
+          "width": 488.00,
+          "x": 245.00,
+          "y": 105.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"4c2f158089385823cc85\",\"layouts\":[{\"id\":0,\"position\":{\"x\":780,\"y\":104,\"z\":2000,\"width\":488,\"height\":271,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Orders.OrderDate\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Order Details.OrderId)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"Orders\",\"Type\":0},{\"Name\":\"o1\",\"Entity\":\"Order Details\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"OrderDate\"},\"Name\":\"Orders.OrderDate\",\"NativeReferenceName\":\"OrderDate\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o1\"}},\"Property\":\"OrderId\"}},\"Function\":5},\"Name\":\"CountNonNull(Order Details.OrderId)\",\"NativeReferenceName\":\"Count of OrderId\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"OrderDate\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"padding\":[{\"properties\":{\"left\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"top\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"right\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"bottom\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 271.00,
+          "width": 488.00,
+          "x": 780.00,
+          "y": 104.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"5d1b8ba3b730cf9ad111\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":463,\"z\":12000,\"width\":232,\"height\":56,\"tabOrder\":12000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Customers.CustomerTitle\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Customers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"CustomerTitle\"},\"Name\":\"Customers.CustomerTitle\",\"NativeReferenceName\":\"CustomerTitle\"}]},\"syncGroup\":{\"groupName\":\"CustomerTitle\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"header\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}}}}],\"items\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#272B34'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 56.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 463.00,
+          "z": 12000.00
+        },
+        {
+          "config": "{\"name\":\"5d922dc227f3b3bf27b0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":352,\"z\":10000,\"width\":232,\"height\":56,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Products.Category\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Products\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Category\"},\"Name\":\"Products.Category\",\"NativeReferenceName\":\"Category\"}]},\"expansionStates\":[{\"roles\":[\"Values\"],\"levels\":[{\"queryRefs\":[\"Products.Category\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"syncGroup\":{\"groupName\":\"Category\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"header\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}}}}],\"items\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#272B34'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 56.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 352.00,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"6c924077f07039370ffe\",\"layouts\":[{\"id\":0,\"position\":{\"x\":232,\"y\":15,\"z\":4000,\"width\":216,\"height\":36,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Order Monitoring\",\"textStyle\":{\"fontSize\":\"18pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"100D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 36.00,
+          "width": 216.00,
+          "x": 232.00,
+          "y": 15.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"71c9a556ee02f1bb69e4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":202,\"z\":8000,\"width\":232,\"height\":50,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'blank'\"}}},\"lineWeight\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}},\"placement\":{\"expr\":{\"Literal\":{\"Value\":\"'custom'\"}}},\"leftMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"rightMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"iconSize\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'right'\"}}}},\"selector\":{\"id\":\"default\"}}],\"text\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Order Monitoring'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'PageNavigation'\"}}},\"navigationSection\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}},\"showDefaultTooltip\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 50.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 202.00,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"769e3646f25375d94ce4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":575,\"z\":14000,\"width\":232,\"height\":56,\"tabOrder\":14000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Order Details.Discount\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"Order Details\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Discount\"},\"Name\":\"Order Details.Discount\",\"NativeReferenceName\":\"Discount\"}]},\"syncGroup\":{\"groupName\":\"Discount\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"header\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}}}}],\"items\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#272B34'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 56.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 575.00,
+          "z": 14000.00
+        },
+        {
+          "config": "{\"name\":\"8c873bc272239bd853ba\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":407,\"z\":11000,\"width\":232,\"height\":56,\"tabOrder\":11000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Products.ProductName\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Products\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"ProductName\"},\"Name\":\"Products.ProductName\",\"NativeReferenceName\":\"ProductName\"}]},\"expansionStates\":[{\"roles\":[\"Values\"],\"levels\":[{\"queryRefs\":[\"Products.ProductName\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"syncGroup\":{\"groupName\":\"ProductName\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"header\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}}}}],\"items\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#272B34'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 56.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 407.00,
+          "z": 11000.00
+        },
+        {
+          "config": "{\"name\":\"91be02698c3228304688\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":3000,\"width\":232,\"height\":720,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}},\"selector\":{\"id\":\"default\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"bf02c2d4eb7d6f11dc36\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":252,\"z\":6000,\"width\":232,\"height\":50,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'blank'\"}}},\"lineWeight\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}},\"placement\":{\"expr\":{\"Literal\":{\"Value\":\"'custom'\"}}},\"leftMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"rightMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"iconSize\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'right'\"}}}},\"selector\":{\"id\":\"default\"}}],\"text\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Product Monitoring'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'PageNavigation'\"}}},\"navigationSection\":{\"expr\":{\"Literal\":{\"Value\":\"'ReportSection78136d62bb6c0099b303'\"}}},\"showDefaultTooltip\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 50.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 252.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"d65dfa2c03e5acb9851d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":519,\"z\":13000,\"width\":232,\"height\":56,\"tabOrder\":13000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Customers.Name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Customers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Name\"},\"Name\":\"Customers.Name\",\"NativeReferenceName\":\"Name\"}]},\"syncGroup\":{\"groupName\":\"Name\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"header\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}}}}],\"items\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#272B34'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 56.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 519.00,
+          "z": 13000.00
+        },
+        {
+          "config": "{\"name\":\"db4dd04077ccb5cce69c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":152,\"z\":7000,\"width\":232,\"height\":50,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'blank'\"}}},\"lineWeight\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}},\"placement\":{\"expr\":{\"Literal\":{\"Value\":\"'custom'\"}}},\"leftMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"rightMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"iconSize\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'right'\"}}}},\"selector\":{\"id\":\"default\"}}],\"text\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'High-Level Metrics'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'PageNavigation'\"}}},\"navigationSection\":{\"expr\":{\"Literal\":{\"Value\":\"'ReportSection'\"}}},\"showDefaultTooltip\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 50.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 152.00,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"dcf8a43556d9d858e747\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":9000,\"width\":232,\"height\":153,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"EcoPower_Logistics_V25757580247255463.png\"}}}}}],\"imageScaling\":[{\"properties\":{\"imageScalingType\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"25D\"}}}}}],\"padding\":[{\"properties\":{\"top\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"left\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"right\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"bottom\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 153.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 9000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Customer Monitoring",
+      "displayOption": 3,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionfc2c3184f04351e06da9",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"18966207da27da9edcbc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":302,\"z\":2000,\"width\":232,\"height\":50,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'blank'\"}}},\"lineWeight\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}},\"placement\":{\"expr\":{\"Literal\":{\"Value\":\"'custom'\"}}},\"leftMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"rightMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"iconSize\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'right'\"}}}},\"selector\":{\"id\":\"default\"}}],\"text\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Customer Monitoring'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'PageNavigation'\"}}},\"navigationSection\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}},\"showDefaultTooltip\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 50.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 302.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"4f09dddeddb041965a79\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":152,\"z\":4000,\"width\":232,\"height\":50,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'blank'\"}}},\"lineWeight\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}},\"placement\":{\"expr\":{\"Literal\":{\"Value\":\"'custom'\"}}},\"leftMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"rightMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"iconSize\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'right'\"}}}},\"selector\":{\"id\":\"default\"}}],\"text\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'High-Level Metrics'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'PageNavigation'\"}}},\"navigationSection\":{\"expr\":{\"Literal\":{\"Value\":\"'ReportSection'\"}}},\"showDefaultTooltip\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 50.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 152.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"9aef57d5ab2e471d15b2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":252,\"z\":3000,\"width\":232,\"height\":50,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'blank'\"}}},\"lineWeight\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}},\"placement\":{\"expr\":{\"Literal\":{\"Value\":\"'custom'\"}}},\"leftMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"rightMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"iconSize\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'right'\"}}}},\"selector\":{\"id\":\"default\"}}],\"text\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Product Monitoring'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'PageNavigation'\"}}},\"navigationSection\":{\"expr\":{\"Literal\":{\"Value\":\"'ReportSection78136d62bb6c0099b303'\"}}},\"showDefaultTooltip\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 50.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 252.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"c14a18572005f28febd9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":239,\"y\":15,\"z\":1000,\"width\":224,\"height\":36,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Customer Monitoring\",\"textStyle\":{\"fontSize\":\"18pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"100D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 36.00,
+          "width": 224.00,
+          "x": 239.00,
+          "y": 15.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"cbc9c27df742108422cb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":6000,\"width\":232,\"height\":153,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"EcoPower_Logistics_V25757580247255463.png\"}}}}}],\"imageScaling\":[{\"properties\":{\"imageScalingType\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"25D\"}}}}}],\"padding\":[{\"properties\":{\"top\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"left\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"right\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"bottom\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 153.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"dbb05b1ff9516c3aa428\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":232,\"height\":720,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}},\"selector\":{\"id\":\"default\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"dd4b56375d0ae411a78d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":202,\"z\":5000,\"width\":232,\"height\":50,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'blank'\"}}},\"lineWeight\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}},\"placement\":{\"expr\":{\"Literal\":{\"Value\":\"'custom'\"}}},\"leftMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"rightMargin\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}},\"iconSize\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'right'\"}}}},\"selector\":{\"id\":\"default\"}}],\"text\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Order Monitoring'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'PageNavigation'\"}}},\"navigationSection\":{\"expr\":{\"Literal\":{\"Value\":\"'ReportSectiondf882e834a386b8cd463'\"}}},\"showDefaultTooltip\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 50.00,
+          "width": 232.00,
+          "x": 0.00,
+          "y": 202.00,
+          "z": 5000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "Theme_7_-_Dark40713633556512363.json"
+}
