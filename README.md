@@ -39,16 +39,19 @@ The report consists of the following pages:
 _Below are visual previews of the report's different pages to give you an idea of what to expect when you access the Power BI report._
 
 ### **High-Level Metrics**
-![image](https://github.com/Albert-Willemse/CMPG-323-Project-5-38205742/assets/112475881/a3b63654-0e32-45ab-9846-ef2400db58b1)
+![image](https://github.com/Albert-Willemse/CMPG-323-Project-5-38205742/assets/112475881/f4c458b9-15c0-47cd-96df-ffd0f62d6c8c)
+
 
 ### **Order Monitoring**
-![image](https://github.com/Albert-Willemse/CMPG-323-Project-5-38205742/assets/112475881/3f469e2b-cc9c-467d-9557-84616af5c41c)
+![image](https://github.com/Albert-Willemse/CMPG-323-Project-5-38205742/assets/112475881/b6b543f8-43c6-4a97-86e5-6994b6c879e7)
+
 
 ### **Product Monitoring**
 ![image](https://github.com/Albert-Willemse/CMPG-323-Project-5-38205742/assets/112475881/f805b52d-ebed-4d30-b27d-f97c20975ee1)
 
 ### **Customer Monitoring**
-![image](https://github.com/Albert-Willemse/CMPG-323-Project-5-38205742/assets/112475881/f223b98a-c46e-4291-beb8-a62e3414526e)
+![image](https://github.com/Albert-Willemse/CMPG-323-Project-5-38205742/assets/112475881/172ad26b-a7a2-4266-8d36-de5465bd23b6)
+
 
 
 
