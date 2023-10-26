@@ -10,11 +10,11 @@
       "nodes": [
         {
           "location": {
-            "x": 578.38305001469371,
-            "y": -10
+            "x": 702.38305001469371,
+            "y": 10
           },
           "nodeIndex": "Customers",
-          "nodeLineageTag": "a7a208b9-3678-4793-9e32-69086b6fd1b8",
+          "nodeLineageTag": "6205d952-07f6-41f9-acfc-e3fbe0d9d51c",
           "size": {
             "height": 176,
             "width": 234
@@ -23,11 +23,11 @@
         },
         {
           "location": {
-            "x": 10,
-            "y": 7.98511077959752
+            "x": 103,
+            "y": 0
           },
           "nodeIndex": "Order Details",
-          "nodeLineageTag": "a76bac78-a502-44fe-8f31-3914550970fa",
+          "nodeLineageTag": "4a6c5556-41b9-4374-919d-749c8d25a708",
           "size": {
             "height": 200,
             "width": 234
@@ -36,11 +36,11 @@
         },
         {
           "location": {
-            "x": 294.20156119318523,
-            "y": 22.844697959845661
+            "x": 399.20156119318523,
+            "y": 0
           },
           "nodeIndex": "Orders",
-          "nodeLineageTag": "1643df79-c932-46c2-a5f4-509c9712b6de",
+          "nodeLineageTag": "ef972238-d537-4bb2-9d16-b4eadce7b1b4",
           "size": {
             "height": 176,
             "width": 234
@@ -49,11 +49,11 @@
         },
         {
           "location": {
-            "x": 852.38305001469371,
-            "y": 20.992555389798753
+            "x": 87,
+            "y": 332.99255538979878
           },
           "nodeIndex": "Products",
-          "nodeLineageTag": "19b31a93-977e-44f8-8e8a-a718210ceb83",
+          "nodeLineageTag": "60d259bf-475b-4fb4-98fc-53bcbc51f69b",
           "size": {
             "height": 176,
             "width": 234
