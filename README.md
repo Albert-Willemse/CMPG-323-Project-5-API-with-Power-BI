@@ -1,4 +1,4 @@
-# CMPG-323-Project-5-38205742
+# CMPG-323-Project-5-API-with-Power-BI
 _Visualize backend data using API endpoints. This project focuses on creating basic yet meaningful reports._
 
 ## Table of Contents
